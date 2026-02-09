@@ -1,0 +1,40 @@
+{
+  "name": "podscript",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "build:cli": "tsc src/cli.ts --outDir dist --esModuleInterop --module commonjs --target es2020 --skipLibCheck --resolveJsonModule",
+    "transcribe": "node dist/cli.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.0.0",
+    "autoprefixer": "^10.4.24",
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^17.2.3",
+    "fast-xml-parser": "^4.0.0",
+    "form-data": "^4.0.5",
+    "next": "14.2.0",
+    "node-fetch": "^2.7.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/node-fetch": "^2.6.13",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/uuid": "^9.0.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.0",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}

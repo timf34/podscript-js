@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 23, 23, 23;
+  --background-rgb: 250, 250, 250;
+}
+
+.dark {
+  --foreground-rgb: 245, 245, 245;
+  --background-rgb: 23, 23, 23;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+/* Typography for transcript reading */
+.transcript-text {
+  @apply font-serif text-lg leading-relaxed;
+}
+
+/* Speaker label colors */
+.speaker-0 { @apply text-speaker-1; }
+.speaker-1 { @apply text-speaker-2; }
+.speaker-2 { @apply text-speaker-3; }
+.speaker-3 { @apply text-speaker-4; }
+.speaker-4 { @apply text-speaker-5; }
+.speaker-5 { @apply text-speaker-6; }
+
+/* Search highlight */
+.search-highlight {
+  @apply bg-yellow-200 dark:bg-yellow-800 rounded px-0.5;
+}
+
+.search-highlight-current {
+  @apply bg-orange-300 dark:bg-orange-700 rounded px-0.5;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for transcript */
+.transcript-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.transcript-container::-webkit-scrollbar-track {
+  @apply bg-neutral-100 dark:bg-neutral-800;
+}
+
+.transcript-container::-webkit-scrollbar-thumb {
+  @apply bg-neutral-300 dark:bg-neutral-600 rounded;
+}
+
+.transcript-container::-webkit-scrollbar-thumb:hover {
+  @apply bg-neutral-400 dark:bg-neutral-500;
+}
